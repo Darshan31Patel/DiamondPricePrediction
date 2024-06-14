@@ -3,8 +3,12 @@ flake8
 isort
 loguru
 mkdocs
-pip
 python-dotenv
 tqdm
 typer
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
 -e .
