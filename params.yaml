@@ -1,0 +1,21 @@
+model_params:
+  random_forest:
+    n_estimators: 100
+    max_depth: 6
+    verbose: 2
+    n_jobs : -1
+
+  xgboost:
+    booster: 'gblinear'
+    lambda: 1.0
+    eta: 0.3
+    n_estimators: 700
+  
+  lightgbm:
+    boosting_type: 'gbdt'
+    num_leaves: 50
+    learning_rate: 0.25
+    n_estimators: 800
+    max_depth: 10
+    min_data_in_leaf: 80
+    n_jobs: -1

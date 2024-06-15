@@ -32,11 +32,39 @@ stages:
       nfiles: 2
     - path: ./src/data/data_transformation.py
       hash: md5
-      md5: e2e9ad72eb0c5f0402923368fd11b784
-      size: 2946
+      md5: b6180882d54a1a088579df22bdf8059b
+      size: 3517
     outs:
     - path: ./data/processed/
       hash: md5
-      md5: f3b565eddff0bbba8aab72005e715c37.dir
-      size: 10644240
+      md5: 9b3c223136f4c11650fab4ef73747f52.dir
+      size: 10644224
       nfiles: 2
+  model_training:
+    cmd: python ./src/models/model_training.py
+    deps:
+    - path: ./data/processed/
+      hash: md5
+      md5: 9b3c223136f4c11650fab4ef73747f52.dir
+      size: 10644224
+      nfiles: 2
+    outs:
+    - path: ./models/trained_models
+      hash: md5
+      md5: df35101e665a2b27ccaee070a0151f0b.dir
+      size: 5658348
+      nfiles: 4
+  model_trainer:
+    cmd: python ./src/models/model_trainer.py
+    deps:
+    - path: ./data/processed/
+      hash: md5
+      md5: 9b3c223136f4c11650fab4ef73747f52.dir
+      size: 10644224
+      nfiles: 2
+    outs:
+    - path: ./models/trained_models
+      hash: md5
+      md5: f9d71235f1e3a9d7ce73e4e60e0dd9e7.dir
+      size: 3702112
+      nfiles: 5
