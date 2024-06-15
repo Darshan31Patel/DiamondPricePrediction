@@ -7,3 +7,11 @@ stages:
     outs:
       - ./data/raw/extracted
       - ./data/interim/
+  
+  data_transformation:
+    cmd : python ./src/data/data_transformation.py
+    deps:
+      - ./src/data/data_transformation.py
+      - ./data/interim/
+    outs:
+      - ./data/processed/
