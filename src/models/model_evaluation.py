@@ -46,7 +46,7 @@ def evaluate_model(data,model,preprocessor_path):
 
 def main():
     root_path = Path(__file__).parent.parent.parent
-    preprocessor_path = root_path / 'models' / 'preprocessors.pkl'
+    preprocessor_path = root_path / 'models' / 'preprocessor.joblib'
 
     data_path = root_path/'data'/'processed'/'test.csv'
     data = pd.read_csv(data_path)
@@ -69,7 +69,7 @@ def main():
     best_model_name = sorted_models[0][0] + '.joblib'
     # print(best_model_name)
     best_model = joblib.load(trained_model_path/best_model_name)
-    joblib.dump(best_model,root_path/'models'/'best_model')
+    joblib.dump(best_model,root_path/'models'/'best_model.joblib')
 
 
 if __name__=="__main__":

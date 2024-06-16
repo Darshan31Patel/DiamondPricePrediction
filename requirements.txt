@@ -14,4 +14,6 @@ scikit-learn
 xgboost
 lightgbm
 mlflow
+flask
+pydantic
 -e .

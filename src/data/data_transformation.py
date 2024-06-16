@@ -68,7 +68,7 @@ def main():
     X_test_preprocessed = feature_preprocessor.transform(test_df)
     y_test_preprocessed = target_preprocessor.transform(test_df[['price']])
 
-    preprocessor_path = root_path / 'models' / 'preprocessors.pkl'
+    preprocessor_path = root_path / 'models' / 'preprocessor.joblib'
     joblib.dump((feature_preprocessor, target_preprocessor), preprocessor_path)
 
     logger.save_logs(msg="Data preprocessed successfully")

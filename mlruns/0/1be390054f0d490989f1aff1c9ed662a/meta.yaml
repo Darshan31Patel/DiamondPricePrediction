@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Internship/DiamondPricePrediction/mlruns/0/1be390054f0d490989f1aff1c9ed662a/artifacts
+end_time: 1718535620077
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1be390054f0d490989f1aff1c9ed662a
+run_name: masked-wasp-806
+run_uuid: 1be390054f0d490989f1aff1c9ed662a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718535611530
+status: 3
+tags: []
+user_id: Darshan

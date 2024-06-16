@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Internship/DiamondPricePrediction/mlruns/0/fd4e92530a02467ea22fde6f5d7ba11f/artifacts
+end_time: 1718535642053
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: fd4e92530a02467ea22fde6f5d7ba11f
+run_name: gentle-cod-107
+run_uuid: fd4e92530a02467ea22fde6f5d7ba11f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1718535630186
+status: 3
+tags: []
+user_id: Darshan
