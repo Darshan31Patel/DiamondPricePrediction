@@ -22,3 +22,11 @@ stages:
       - ./data/processed/
     outs:
       - ./models/trained_models
+
+  model_evaluation:
+    cmd: python ./src/models/model_evaluation.py
+    deps:
+      - ./src/models/model_evaluation.py
+      - ./data/processed/
+      - ./models/trained_models/
+    

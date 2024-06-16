@@ -68,3 +68,20 @@ stages:
       md5: f9d71235f1e3a9d7ce73e4e60e0dd9e7.dir
       size: 3702112
       nfiles: 5
+  model_evaluation:
+    cmd: python ./src/models/model_evaluation.py
+    deps:
+    - path: ./data/processed/
+      hash: md5
+      md5: 9b3c223136f4c11650fab4ef73747f52.dir
+      size: 10644224
+      nfiles: 2
+    - path: ./models/trained_models/
+      hash: md5
+      md5: f9d71235f1e3a9d7ce73e4e60e0dd9e7.dir
+      size: 3702112
+      nfiles: 5
+    - path: ./src/models/model_evaluation.py
+      hash: md5
+      md5: fb2016fc004691645945880e6679ed43
+      size: 2635
