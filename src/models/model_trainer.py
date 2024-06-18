@@ -17,9 +17,12 @@ logger.set_log_level(level=logging.INFO)
 
 
 def read_yaml(file_path):
-    with open(file_path) as f:
-        data = safe_load(f)
-    return data
+    try:
+        with open(file_path) as f:
+            data = safe_load(f)
+        return data
+    except FileNotFoundError as e:
+        logger.save_logs(msg=f"Error occured : {e}",log_level='error')
 
 def save_model(model,file_name):
     joblib.dump(model,file_name)
